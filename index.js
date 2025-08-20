@@ -74,7 +74,7 @@ function inputForm() {
         <button type="submit" data-action="sortAll">Sort All</button>`;
 
   $form.addEventListener("submit", function (event) {
-    event.preventDefault;
+    event.preventDefault();
     const event_type = event.submitter.dataset.action;
     const form_data = new FormData($form);
     const number_input = Number(form_data.get("number"));
