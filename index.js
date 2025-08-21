@@ -94,13 +94,12 @@ function group(groupName, list) {
   const $section = document.createElement("section");
   $section.innerHTML = `
         <h2>${groupName}</h2>
-        <ul></ul>
+        <p></p>
   `;
-  const $ul = $section.querySelector("ul");
+  const $p = $section.querySelector("p");
   list.forEach((element) => {
-    const $li = document.createElement("li");
-    $li.textContent = element;
-    $ul.append($li);
+    const element_string = element + " ";
+    $p.textContent += element_string;
   });
 
   return $section;
